@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=1 python main.py --do-train --do-eval --checkpoint ./outputs/emotion/best_emotion.pt
