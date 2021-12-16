@@ -20,6 +20,10 @@ while [[ $# -gt 0 ]];do
   esac
 done
 
+WORK_DIR=$(cd $(dirname $(dirname $0));pwd)
+cd ${WORK_DIR}/emotion
+
 CUDA_VISIBLE_DEVICES=${GPU} python main.py \
+    --glove ${GLOVE} \
     --do-train \
     --do-eval
